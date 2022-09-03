@@ -2,24 +2,24 @@ import java.text.Format;
 
 public class Main {
     public static void printYear (int k) {
-        if (k % 4 == 0 && k % 100 != 0 || k % 400 == 0) {
+        if ((k % 4 == 0 && k % 100 != 0) || k % 400 == 0) {
             System.out.println(k + " год является високосным");
         } else {
             System.out.println(k + " год не является високосным");
         }
     }
 
-    public static void instalApp(int DeviceYear, int OS) {
-        if (DeviceYear >= 2015) {
+    public static void instalApp(int deviceYear, int operatingSystem) {
+        if (deviceYear >= 2015) {
             System.out.println("Установите приложение  для");
-            if (OS == 0) {
+            if (operatingSystem == 0) {
                 System.out.println("Android по ссылке");
             } else {
                 System.out.println("iOS по ссылке");
             }
-        } else if (DeviceYear < 2015) {
+        } else if (deviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для");
-            if (OS == 0) {
+            if (operatingSystem == 0) {
                 System.out.println("Android по ссылке");
             } else {
                 System.out.println("iOS по ссылке");
